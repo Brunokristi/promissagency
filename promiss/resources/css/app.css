@@ -4,8 +4,38 @@
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
 @source '../**/*.js';
+@source '../**/*.vue';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --color-dark: #000000;
+    --color-white: #ffffff;
+    --color-accent: #c3234b;
+    --color-light: #958f83;
+
+    --font-sans: 'Outfit', sans-serif;
+}
+
+@layer components {
+
+    /* Headings */
+    .h1 {
+        @apply text-7xl leading-tight tracking-tight font-sans font-normal;
+    }
+
+    .h2 {
+        @apply text-xl font-semibold leading-snug tracking-tight font-sans;
+    }
+
+    .p1 {
+        @apply text-xl leading-snug tracking-tight font-sans font-light;
+    }
+
+    .p2 {
+        @apply text-base leading-snug tracking-tight font-sans;
+    }
+
+    .hue {
+        @apply text-accent font-sans;
+        text-shadow: 0 0 10px var(--color-accent);
+    }
 }

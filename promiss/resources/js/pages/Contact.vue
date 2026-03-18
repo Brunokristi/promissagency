@@ -1,0 +1,88 @@
+<script setup>
+import Tag from '../components/Tag.vue';
+import Button from '../components/Button.vue';
+import Image from '../components/Image.vue';
+
+const image1 = '/assets/placeholder.jpg';
+
+</script>
+<template>
+    <div class="w-full h-auto gap-10 py-16 space-y-10 flex flex-col items-center">
+        <div class="flex w-full flex-col items-center gap-6">
+            <Tag text="kontakt" id="contact" />
+
+            <h1 class="h1 mt-4 text-white">
+                Podme <span class="hue">spolupracovať</span>
+            </h1>
+
+            <p class="p1 text-light">
+                Kontaktujte nás pre nezáväznú konzultáciu a cenovú ponuku.
+            </p>
+        </div>
+
+        <div class="grid w-full grid-cols-2 gap-4 sm:grid-cols-5">
+            <Image
+                :source="image1"
+                :text="'Valentínska promo akcia'"
+            />
+            <Image
+                :source="image1"
+                :text="'Ploom-promo event'"
+            />
+            <Image
+                :source="image1"
+                :text="'Agri veľtrh'"
+            />
+            <Image
+                :source="image1"
+                :text="'Golgový turnaj'"
+            />
+            <Image
+                :source="image1"
+                :text="'Golgový turnaj'"
+            />
+            <Image
+                :source="image1"
+                :text="'Golgový turnaj'"
+            />
+            <Image
+                :source="image1"
+                :text="'Golgový turnaj'"
+            />
+            <Image
+                :source="image1"
+                :text="'Degustácia - Koliba'"
+            />
+            <Image
+                :source="image1"
+                :text="'Golgový turnaj'"
+            />
+            <Image
+                :source="image1"
+                :text="'Veľtrh'"
+            />
+            <Image
+                :source="image1"
+                :text="'Veľtrh'"
+            />
+            <Image
+                :source="image1"
+                :text="'Veľtrh'"
+            />
+            <Image
+                :source="image1"
+                :text="'Veľtrh'"
+            />
+            <Image
+                :source="image1"
+                :text="'Festival'"
+            />
+            <Image
+                :source="image1"
+                :text="'Golgový turnaj'"
+            />
+        </div>
+
+        <Button variant="secondary" text="Zobraziť viac na Instagrame" />
+    </div>
+</template>
