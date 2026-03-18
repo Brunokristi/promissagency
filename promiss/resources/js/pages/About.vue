@@ -5,7 +5,7 @@ import Card from '../components/Card.vue';
 </script>
 
 <template>
-    <div class="flex w-full h-auto flex-col gap-10 py-16 lg:h-screen lg:flex-row lg:items-center">
+    <div class="flex w-full h-auto flex-col gap-10 py-16 lg:flex-row lg:items-center">
         <div class="flex w-full h-full flex-col justify-center gap-6 lg:w-1/2">
             <Tag text="o nás" id="about" />
 
@@ -22,7 +22,7 @@ import Card from '../components/Card.vue';
             </p>
 
             <div>
-                <Button variant="secondary" text="Dozvedieť sa viac" />
+                <Button variant="secondary" text="Dozvedieť sa viac" href="#contact" />
             </div>
         </div>
 

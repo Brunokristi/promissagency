@@ -7,6 +7,7 @@ import About from './pages/About.vue';
 import Services from './pages/Services.vue';
 import Portfolio from './pages/Portfolio.vue';
 import Contact from './pages/Contact.vue';
+import Footer from './components/Footer.vue';
 
 
 </script>
@@ -22,6 +23,7 @@ import Contact from './pages/Contact.vue';
             <Portfolio />
             <Contact />
         </div>
+        <Footer />
     </main>
 </template>
 

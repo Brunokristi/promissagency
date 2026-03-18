@@ -9,11 +9,11 @@ import Card from '../components/Card.vue';
         <div class="flex w-full flex-col items-center gap-6">
             <Tag text="naše služby" id="services" />
 
-            <h1 class="h1 mt-4 text-white">
+            <h1 class="h1 mt-4 text-white text-center">
                 Pre každú príležitosť
             </h1>
 
-            <p class="p1 text-light">
+            <p class="p1 text-light text-center">
                 Komplexné hostesingové služby prispôsobené vašim jedinečným potrebám.
             </p>
         </div>

@@ -1,14 +1,19 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 
 const props = defineProps({
     icon: String,
     number: String,
     value: String,
     text: String,
+    iconPosition: {
+        type: String,
+        default: 'top',
+    },
 })
 
 const current = ref(0)
+const emit = defineEmits(['click'])
 
 const animate = () => {
     if (!props.number) {
@@ -35,26 +40,52 @@ const animate = () => {
     requestAnimationFrame(update)
 }
 
+const containerClass = computed(() =>
+    props.iconPosition === 'left'
+        ? 'flex items-center gap-4'
+        : 'flex flex-col items-center gap-4'
+)
+
 onMounted(() => {
     animate()
 })
 </script>
 
 <template>
-    <div class="group flex flex-col items-center gap-4 bg-light/20 backdrop-blur border border-light/40 rounded-2xl p-6 hover:scale-101 transition-colors transition-transform duration-300 hover:bg-light/30">
-         <i
+    <div
+        @click="emit('click')"
+        :class="[
+            'group bg-light/20 backdrop-blur border border-light/40 rounded-2xl p-6 hover:scale-101 transition-colors transition-transform duration-300 hover:bg-light/30 cursor-pointer',
+            containerClass
+        ]"
+    >
+        <i
             v-if="props.icon"
             :class="props.icon"
-            class="bg-accent/20 text-md text-accent rounded-xl h-12 w-12 flex items-center justify-center"
+            class="bg-accent/20 text-md text-accent rounded-xl h-12 w-12 flex items-center justify-center flex-shrink-0"
         ></i>
-        <div class="flex items-center gap-1 text-2xl">
-            <span v-if="props.number" class="text-white transition-colors duration-300 group-hover:text-accent">
-                {{ current }}
-            </span>
-            <span class="text-white transition-colors duration-300 group-hover:text-accent">
-                {{ props.value }}
-            </span>
+
+        <div
+            :class="props.iconPosition === 'left' ? 'flex flex-col items-start' : 'flex flex-col items-center'"
+        >
+            <div class="flex items-center gap-1 text-2xl">
+                <span
+                    v-if="props.number"
+                    class="text-white transition-colors duration-300 group-hover:text-accent"
+                >
+                    {{ current }}
+                </span>
+                <span class="text-white transition-colors duration-300 group-hover:text-accent">
+                    {{ props.value }}
+                </span>
+            </div>
+
+            <p
+                class="p2 text-light"
+                :class="props.iconPosition === 'left' ? 'text-left' : 'text-center'"
+            >
+                {{ props.text }}
+            </p>
         </div>
-        <p class="p2 text-light text-center">{{ props.text }}</p>
     </div>
 </template>

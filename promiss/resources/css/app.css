@@ -19,7 +19,7 @@
 
     /* Headings */
     .h1 {
-        @apply text-7xl leading-tight tracking-tight font-sans font-normal;
+        @apply text-4xl leading-tight tracking-tight font-sans font-normal;
     }
 
     .h2 {
@@ -38,4 +38,8 @@
         @apply text-accent font-sans;
         text-shadow: 0 0 10px var(--color-accent);
     }
+}
+
+html {
+    scroll-behavior: smooth;
 }

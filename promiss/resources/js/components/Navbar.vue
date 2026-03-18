@@ -23,15 +23,15 @@ const closeMenu = () => {
             </a>
 
             <div class="hidden items-center gap-8 md:flex">
-                <Button variant="text" text="Domov" />
-                <Button variant="text" text="O nás" />
-                <Button variant="text" text="Služby" />
-                <Button variant="text" text="Tu ste nás mohli stretnúť" />
-                <Button variant="text" text="Kontakt" />
+                <Button variant="text" text="Domov" href="#home" />
+                <Button variant="text" text="O nás" href="#about" />
+                <Button variant="text" text="Služby" href="#services" />
+                <Button variant="text" text="Tu ste nás mohli stretnúť" href="#portfolio" />
+                <Button variant="text" text="Kontakt" href="#contact" />
             </div>
 
             <div class="hidden md:block">
-                <Button variant="primary" text="Kontaktujte nás" />
+                <Button variant="primary" text="Kontaktujte nás" href="#contact" />
             </div>
 
             <button
@@ -55,14 +55,14 @@ const closeMenu = () => {
         <Transition name="mobile-menu">
             <div
                 v-if="isOpen"
-                class="flex flex-col gap-6 pb-4 md:hidden"
+                class="flex flex-col gap-6 pb-4 md:hidden items-center"
             >
-                <Button variant="text" text="Domov" @click="closeMenu" />
-                <Button variant="text" text="O nás" @click="closeMenu" />
-                <Button variant="text" text="Služby" @click="closeMenu" />
-                <Button variant="text" text="Tu ste nás mohli stretnúť" @click="closeMenu" />
-                <Button variant="text" text="Kontakt" @click="closeMenu" />
-                <Button variant="primary" text="Kontaktujte nás" @click="closeMenu" />
+                <Button variant="text" text="Domov" href="#home" @click="closeMenu" />
+                <Button variant="text" text="O nás" href="#about" @click="closeMenu" />
+                <Button variant="text" text="Služby" href="#services" @click="closeMenu" />
+                <Button variant="text" text="Tu ste nás mohli stretnúť" href="#portfolio" @click="closeMenu" />
+                <Button variant="text" text="Kontakt" href="#contact" @click="closeMenu" />
+                <Button variant="primary" text="Kontaktujte nás" href="#contact" @click="closeMenu" />
             </div>
         </Transition>
     </nav>

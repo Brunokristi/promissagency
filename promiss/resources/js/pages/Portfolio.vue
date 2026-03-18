@@ -2,7 +2,10 @@
 import Tag from '../components/Tag.vue';
 import Button from '../components/Button.vue';
 import Image from '../components/Image.vue';
-import Card from '../components/Card.vue';
+
+const openInstagram = () => {
+    window.open('https://www.instagram.com/promiss_hostess_agency/', '_blank');
+}
 
 const image1 = '/assets/placeholder.jpg';
 
@@ -12,11 +15,11 @@ const image1 = '/assets/placeholder.jpg';
         <div class="flex w-full flex-col items-center gap-6">
             <Tag text="portfolio" id="portfolio" />
 
-            <h1 class="h1 mt-4 text-white">
+            <h1 class="h1 mt-4 text-white text-center">
                 Tu ste nás mohli <span class="hue">stretnúť</span>
             </h1>
 
-            <p class="p1 text-light">
+            <p class="p1 text-light text-center">
                 Naše hostessky na eventoch, kde sme zanechali nezabudnuteľný dojem.
             </p>
         </div>
@@ -84,6 +87,6 @@ const image1 = '/assets/placeholder.jpg';
             />
         </div>
 
-        <Button variant="secondary" text="Zobraziť viac na Instagrame" />
+        <Button variant="secondary" text="Zobraziť viac na Instagrame" @click="openInstagram()" />
     </div>
 </template>
