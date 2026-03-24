@@ -13,7 +13,7 @@ const image1 = '/assets/placeholder.jpg';
 <template>
     <div class="w-full h-auto gap-10 py-16 space-y-10 flex flex-col items-center">
         <div class="flex w-full flex-col items-center gap-6">
-            <Tag text="portfolio" id="portfolio" />
+            <Tag text="portfólio" id="portfolio" />
 
             <h1 class="h1 mt-4 text-white text-center">
                 Tu ste nás mohli <span class="hue">stretnúť</span>

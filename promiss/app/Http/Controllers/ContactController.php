@@ -19,7 +19,7 @@ class ContactController extends Controller
             'message' => ['required', 'string', 'max:5000'],
         ]);
 
-        $recipient = 'info@promissagency.com';
+        $recipient = 'promiss@promissagency.com';
         $subject = 'Novy dopyt z webu - ' . $validated['event_type'];
 
         $html = view('emails.contact', [
@@ -32,18 +32,26 @@ class ContactController extends Controller
                     ->subject($subject)
                     ->replyTo($validated['email'], $validated['name']);
             });
+
+            Mail::html(
+                view('emails.confirmation', ['data' => $validated])->render(),
+                function ($message) use ($validated) {
+                    $message->to($validated['email'], $validated['name'])
+                        ->subject('Ďakujeme za záujem');
+                }
+            );
         } catch (\Throwable $exception) {
             Log::error('Contact form email send failed.', [
                 'error' => $exception->getMessage(),
             ]);
 
             return response()->json([
-                'message' => 'Spravu sa nepodarilo odoslat. Skuste to prosim znova.',
+                'message' => 'Správu sa nepodarilo odoslať. Skúste to prosím znova.',
             ], 500);
         }
 
         return response()->json([
-            'message' => 'Dakujeme, vasa sprava bola odoslana.',
+            'message' => 'Ďakujeme, vaša správa bola odoslaná.',
         ]);
     }
 }

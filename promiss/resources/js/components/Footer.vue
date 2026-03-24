@@ -26,7 +26,7 @@
 
 
             <p class="p2 text-light text-center">
-                &copy; {{ new Date().getFullYear() }} ProMiss. Všetky práva vyhradené.
+                &copy; {{ new Date().getFullYear() }} Promiss. Všetky práva vyhradené.
             </p>
         </div>
     </footer>
