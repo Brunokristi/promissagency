@@ -19,7 +19,7 @@ class ContactController extends Controller
             'message' => ['required', 'string', 'max:5000'],
         ]);
 
-        $recipient = 'promiss@promissagency.com';
+        $recipient = 'info@promissagency.com';
         $subject = 'Novy dopyt z webu - ' . $validated['event_type'];
 
         $html = view('emails.contact', [

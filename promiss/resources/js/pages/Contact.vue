@@ -9,7 +9,7 @@ const callPhone = () => {
 }
 
 const sendEmail = () => {
-    window.location.href = 'mailto:promiss@promissagency.com'
+    window.location.href = 'mailto:info@promissagency.com'
 }
 
 const openMap = () => {
@@ -106,7 +106,7 @@ const submitForm = async () => {
                 <Card
                     icon="bi bi-envelope"
                     value="Email"
-                    text="promiss@promissagency.com"
+                    text="info@promissagency.com"
                     @click="sendEmail"
                     iconPosition="left"
                 />
