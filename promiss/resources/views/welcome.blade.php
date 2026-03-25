@@ -13,6 +13,15 @@
        
     @vite('resources/js/app.js')
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6PH45PHNGR"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6PH45PHNGR');
+    </script>
+
 </head>
 <body>
     <div id="app"></div>
