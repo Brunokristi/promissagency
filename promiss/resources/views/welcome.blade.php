@@ -37,7 +37,7 @@
     >
 
     <meta name="twitter:image" content="https://promissagency.com/og-image.jpg">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -58,6 +58,8 @@
             page_path: window.location.pathname
         });
     </script>
+
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="3233b0dd-4880-455a-88da-c38a30908290" data-blockingmode="auto" type="text/javascript"></script>
 
     @vite('resources/js/app.js')
 </head>
