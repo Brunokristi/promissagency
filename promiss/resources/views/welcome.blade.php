@@ -4,26 +4,68 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Promiss | Personálna a hostesingová agentúra</title>
-    <meta name="description" content="Promiss je personálna a hostesingová agentúra, ktorá poskytuje profesionálny personál pre rôzne eventy a podujatia. Naša agentúra sa zameriava na poskytovanie kvalitných služieb a zabezpečenie spokojnosti našich klientov. Sme tu, aby sme vám pomohli nájsť ten správny personál pre vaše potreby, či už ide o hostesky, promotérov, alebo iný personál pre vaše podujatie. Kontaktujte nás ešte dnes a zistite, ako vám môžeme pomôcť s vašimi personálnymi potrebami!">
 
+    <title>Promiss | Personálna a hostesingová agentúra</title>
+
+    <meta
+        name="description"
+        content="Promiss je personálna a hostesingová agentúra, ktorá poskytuje profesionálny personál pre eventy, podujatia, promo akcie a firemné akcie. Zabezpečujeme spoľahlivé hostesky, promotérov a personál podľa vašich potrieb."
+    >
+    <meta
+        name="keywords"
+        content="personálna agentúra, hostesingová agentúra, hostesky, promotéri, event personál, promo akcie, personál na podujatia, Promiss"
+    >
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Promiss Agency">
+
+    <link rel="canonical" href="https://promissagency.com/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://promissagency.com/">
+    <meta property="og:title" content="Promiss | Personálna a hostesingová agentúra">
+    <meta
+        property="og:description"
+        content="Promiss je personálna a hostesingová agentúra, ktorá poskytuje profesionálny personál pre eventy, podujatia, promo akcie a firemné akcie."
+    >
+    <meta property="og:image" content="https://promissagency.com/og-image.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Promiss | Personálna a hostesingová agentúra">
+    <meta
+        name="twitter:description"
+        content="Promiss je personálna a hostesingová agentúra, ktorá poskytuje profesionálny personál pre eventy, podujatia, promo akcie a firemné akcie."
+    >
+
+    <meta name="twitter:image" content="https://promissagency.com/og-image.jpg">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-       
-    @vite('resources/js/app.js')
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet"
+    >
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6PH45PHNGR"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
 
-    gtag('config', 'G-6PH45PHNGR');
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'G-6PH45PHNGR', {
+            page_path: window.location.pathname
+        });
     </script>
 
+    @vite('resources/js/app.js')
 </head>
 <body>
+    <noscript>
+        Na správne fungovanie tejto stránky je potrebné povoliť JavaScript.
+    </noscript>
+
     <div id="app"></div>
 </body>
 </html>
