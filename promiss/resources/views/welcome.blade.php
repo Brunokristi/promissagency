@@ -47,27 +47,28 @@
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6PH45PHNGR"></script>
     <script>
+        window.PROMISS_GA_MEASUREMENT_ID = 'G-6PH45PHNGR';
         window.dataLayer = window.dataLayer || [];
 
         function gtag() {
             dataLayer.push(arguments);
         }
 
+        window.gtag = gtag;
+
         gtag('js', new Date());
-        gtag('config', 'G-6PH45PHNGR', {
-            page_path: window.location.pathname
+        gtag('consent', 'default', {
+            analytics_storage: 'denied',
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied',
+            wait_for_update: 500
         });
     </script>
-
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="3233b0dd-4880-455a-88da-c38a30908290" data-blockingmode="auto" type="text/javascript"></script>
 
     @vite('resources/js/app.js')
 </head>
 <body>
-    <noscript>
-        Na správne fungovanie tejto stránky je potrebné povoliť JavaScript.
-    </noscript>
-
     <div id="app"></div>
 </body>
 </html>

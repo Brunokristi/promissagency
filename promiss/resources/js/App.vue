@@ -1,6 +1,7 @@
 <script setup>
 import Navbar from './components/Navbar.vue';
 import Background from './components/Background.vue';
+import CookieConsent from './components/CookieConsent.vue';
 
 import Hero from './pages/Hero.vue';
 import About from './pages/About.vue';
@@ -24,6 +25,7 @@ import Footer from './components/Footer.vue';
             <Contact />
         </div>
         <Footer />
+        <CookieConsent />
     </main>
 </template>
 
