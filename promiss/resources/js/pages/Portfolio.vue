@@ -7,7 +7,23 @@ const openInstagram = () => {
     window.open('https://www.instagram.com/promiss_hostess_agency/', '_blank');
 }
 
-const image1 = '/assets/placeholder.jpg';
+const image1 = '/assets/1.jpeg';
+const image2 = '/assets/2.jpeg';
+const image3 = '/assets/3.jpeg';
+const image4 = '/assets/4.jpeg';
+const image5 = '/assets/5.jpeg';
+const image6 = '/assets/6.jpeg';
+const image7 = '/assets/7.jpeg';
+const image8 = '/assets/8.jpeg';
+const image9 = '/assets/9.jpeg';
+const image10 = '/assets/10.jpeg';
+const image11 = '/assets/11.jpeg';
+const image12 = '/assets/12.jpeg';
+const image13 = '/assets/13.jpeg';
+const image14 = '/assets/14.jpeg';
+const image15 = '/assets/15.jpeg';
+const image16 = '/assets/16.jpeg';
+
 
 </script>
 <template>
@@ -26,43 +42,47 @@ const image1 = '/assets/placeholder.jpg';
 
         <div class="grid w-full grid-cols-2 gap-4 sm:grid-cols-5">
             <Image
-                :source="image1"
+                :source="image15"
                 :text="'Valentínska promo akcia'"
             />
             <Image
-                :source="image1"
+                :source="image11"
                 :text="'Ploom-promo event'"
             />
             <Image
-                :source="image1"
+                :source="image6"
                 :text="'Agri veľtrh'"
             />
             <Image
-                :source="image1"
+                :source="image12"
                 :text="'Golgový turnaj'"
             />
             <Image
-                :source="image1"
+                :source="image16"
                 :text="'Golgový turnaj'"
             />
             <Image
-                :source="image1"
+                :source="image14"
                 :text="'Golgový turnaj'"
             />
             <Image
-                :source="image1"
+                :source="image10"
                 :text="'Golgový turnaj'"
             />
             <Image
-                :source="image1"
+                :source="image8"
                 :text="'Degustácia - Koliba'"
             />
             <Image
-                :source="image1"
+                :source="image13"
                 :text="'Golgový turnaj'"
             />
             <Image
-                :source="image1"
+                :source="image9"
+                :text="'Degustácia - Koliba'"
+            />
+            <Image
+                :source="image4"
                 :text="'Veľtrh'"
             />
             <Image
@@ -70,19 +90,15 @@ const image1 = '/assets/placeholder.jpg';
                 :text="'Veľtrh'"
             />
             <Image
-                :source="image1"
+                :source="image7"
                 :text="'Veľtrh'"
             />
             <Image
-                :source="image1"
-                :text="'Veľtrh'"
-            />
-            <Image
-                :source="image1"
+                :source="image2"
                 :text="'Festival'"
             />
             <Image
-                :source="image1"
+                :source="image3"
                 :text="'Golgový turnaj'"
             />
         </div>

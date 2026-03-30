@@ -1,5 +1,6 @@
+
 <script setup>
-import { ref, onMounted, computed } from 'vue'
+import { ref, onMounted, onUnmounted, computed } from 'vue'
 
 const props = defineProps({
     icon: String,
@@ -12,8 +13,12 @@ const props = defineProps({
     },
 })
 
+
 const current = ref(0)
 const emit = defineEmits(['click'])
+const containerRef = ref(null)
+let observer = null
+
 
 const animate = () => {
     if (!props.number) {
@@ -22,14 +27,12 @@ const animate = () => {
     }
 
     const target = Number(props.number)
-    const duration = 3000
+    const duration = 1000
     const startTime = performance.now()
 
     const update = (now) => {
         const progress = Math.min((now - startTime) / duration, 1)
-
         current.value = Math.floor(progress * target)
-
         if (progress < 1) {
             requestAnimationFrame(update)
         } else {
@@ -47,12 +50,29 @@ const containerClass = computed(() =>
 )
 
 onMounted(() => {
-    animate()
+    observer = new window.IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animate()
+            }
+        })
+    }, { threshold: 0.3 })
+    if (containerRef.value) {
+        observer.observe(containerRef.value)
+    }
+})
+
+onUnmounted(() => {
+    if (observer && containerRef.value) {
+        observer.unobserve(containerRef.value)
+    }
+    observer = null
 })
 </script>
 
 <template>
     <div
+        ref="containerRef"
         @click="emit('click')"
         :class="[
             'group bg-light/20 backdrop-blur border border-light/40 rounded-2xl p-6 hover:scale-101 transition-colors transition-transform duration-300 hover:bg-light/30 cursor-pointer',

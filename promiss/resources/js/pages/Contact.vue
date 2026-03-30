@@ -1,5 +1,6 @@
 <script setup>
-import { reactive, ref } from 'vue'
+import { reactive, ref, watch } from 'vue'
+import { prefillService } from '../lib/servicePrefill'
 import Tag from '../components/Tag.vue'
 import Card from '../components/Card.vue'
 import Button from '../components/Button.vue'
@@ -17,12 +18,33 @@ const openMap = () => {
 }
 
 const form = reactive({
-    name: '',
-    email: '',
-    phone: '',
-    event_type: '',
-    message: '',
+        name: '',
+        email: '',
+        phone: '',
+        event_type: '',
+        message: '',
 })
+
+// Prefill event_type and message if prefillService is set
+watch(
+    () => prefillService.value,
+    (service) => {
+        if (service) {
+            // Try to match the event_type option
+            const eventTypeMap = {
+                'Korporátne eventy': 'Korporátny event',
+                'VIP & Galavečery': 'Galavečer / VIP',
+                'Promo akcie': 'Promo akcia',
+                'Golfové turnaje': 'Golfový turnaj',
+                'Veľtrhy & Výstavy': 'Veľtrh / Výstava',
+                'Módne prehliadky': 'Módna prehliadka',
+            }
+            form.event_type = eventTypeMap[service] || service
+            form.message = `Mám záujem o hostessky na ${service}. Prosím o cenovú ponuku.`
+        }
+    },
+    { immediate: true }
+)
 
 const isSubmitting = ref(false)
 const successMessage = ref('')

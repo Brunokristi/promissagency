@@ -14,12 +14,12 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="group relative overflow-hidden rounded-2xl border border-light/40 hover:scale-101 transition-transform duration-300 h-50 w-full select-none">
+    <div class="group relative overflow-hidden rounded-2xl border border-light/40 hover:scale-101 transition-transform duration-300 w-full aspect-square select-none">
         
         <img
-            :src="props.source"
-            :alt="props.text"
-            class="w-full h-full object-cover"
+          :src="props.source"
+          :alt="props.text"
+          class="absolute inset-0 w-full h-full object-cover"
         />
 
         <!-- Overlay -->

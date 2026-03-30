@@ -2,7 +2,7 @@
 import Button from '../components/Button.vue'
 import Tag from '../components/Tag.vue'
 
-const image = '/assets/placeholder.jpg'
+const image = '/assets/hero.jpg'
 </script>
 
 <template>
@@ -13,8 +13,8 @@ const image = '/assets/placeholder.jpg'
         >
             <Tag text="profesionálna agentúra" id="home" />
 
-            <h1 class="h1 text-white">
-                Vytvárame <span class="hue">dokonalé</span> zážitky
+            <h1 class="h1 text-white text-7xl">
+                Vytvárame<br> <span class="hue">dokonalé</span> zážitky
             </h1>
 
             <p class="p1 text-light">
@@ -32,10 +32,10 @@ const image = '/assets/placeholder.jpg'
                 :src="image"
                 alt="Hero"
                 class="h-[400px] w-full object-cover lg:h-[520px]
-                    [mask-image:radial-gradient(circle,white_65%,transparent_100%)]"
+                    [mask-image:radial-gradient(circle,white_45%,transparent_100%)]"
             />
 
-            <div class="absolute inset-0 bg-radial from-black/70 via-black/90 to-black">
+            <div class="absolute inset-0 bg-radial from-black/20 via-black/90 to-black">
             </div>
         </div>
 

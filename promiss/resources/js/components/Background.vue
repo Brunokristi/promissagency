@@ -6,17 +6,17 @@ let particles = []
 let animationId
 let mouse = { x: null, y: null }
 
-const ACCENT = '#c3234b'
+const ACCENT = '#ab3f5c'
 
-const PARTICLE_COUNT = 80
+const PARTICLE_COUNT = 50
 
 class Particle {
     constructor(x, y) {
         this.x = x
         this.y = y
-        this.size = Math.random() * 2 + 1
-        this.speedX = (Math.random() - 0.5) * 0.5
-        this.speedY = (Math.random() - 0.5) * 0.5
+        this.size = Math.random() * 2
+        this.speedX = (Math.random() - 0.5) * 0.2
+        this.speedY = (Math.random() - 0.5) * 0.2
     }
 
     update() {
@@ -101,6 +101,6 @@ onBeforeUnmount(() => {
 <template>
     <canvas
         id="particles"
-        class="fixed top-0 left-0 w-full h-full -z-10 bg-black"
+        class="fixed top-0 left-0 w-full h-full -z-10 bg-black" 
     ></canvas>
 </template>
