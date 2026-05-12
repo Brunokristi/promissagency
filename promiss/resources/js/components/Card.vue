@@ -91,7 +91,7 @@ onUnmounted(() => {
             <div class="flex items-center gap-1 text-2xl">
                 <span
                     v-if="props.number"
-                    class="text-white transition-colors duration-300 group-hover:text-accent"
+                    class="text-white text-4xl font-bold transition-colors duration-300 group-hover:text-accent"
                 >
                     {{ current }}
                 </span>

@@ -66,8 +66,8 @@ const image16 = '/assets/16.jpeg';
                 :text="'Golgový turnaj'"
             />
             <Image
-                :source="image10"
-                :text="'Golgový turnaj'"
+                :source="image7"
+                :text="'Veľtrh'"
             />
             <Image
                 :source="image8"
@@ -86,12 +86,8 @@ const image16 = '/assets/16.jpeg';
                 :text="'Veľtrh'"
             />
             <Image
-                :source="image1"
-                :text="'Veľtrh'"
-            />
-            <Image
-                :source="image7"
-                :text="'Veľtrh'"
+                :source="image10"
+                :text="'Golgový turnaj'"
             />
             <Image
                 :source="image2"
@@ -100,6 +96,10 @@ const image16 = '/assets/16.jpeg';
             <Image
                 :source="image3"
                 :text="'Golgový turnaj'"
+            />
+            <Image
+                :source="image1"
+                :text="'Veľtrh'"
             />
         </div>
 

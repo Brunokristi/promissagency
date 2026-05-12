@@ -13,7 +13,7 @@ const image = '/assets/hero.jpg'
         >
             <Tag text="profesionálna agentúra" id="home" />
 
-            <h1 class="h1 text-white text-7xl">
+            <h1 class="h1 text-white md:text-7xl text-4xl">
                 Vytvárame<br> <span class="hue">dokonalé</span> zážitky
             </h1>
 
@@ -27,16 +27,14 @@ const image = '/assets/hero.jpg'
             </div>
         </div>
 
-        <div class="relative w-full lg:w-1/2">
+        <div class="relative w-full overflow-hidden lg:w-1/2">
             <img
                 :src="image"
                 alt="Hero"
-                class="h-[400px] w-full object-cover lg:h-[520px]
-                    [mask-image:radial-gradient(circle,white_45%,transparent_100%)]"
+                class="h-[400px] w-full object-cover object-right md:scale-115 lg:h-[520px]"
             />
 
-            <div class="absolute inset-0 bg-radial from-black/20 via-black/90 to-black">
-            </div>
+            <div class="absolute inset-0 bg-radial from-black/30 via-black/80 to-black/100"></div>
         </div>
 
     </div>

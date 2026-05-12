@@ -87,7 +87,7 @@ const submitForm = async () => {
             throw new Error(data.message || 'Nepodarilo sa odoslať formulár.')
         }
 
-        successMessage.value = 'Ďakujeme, vaša správa bola odoslaná.'
+        successMessage.value = 'Ďakujeme, vaša správa bola odoslaná. V najbližších dňoch Vás budeme kontaktovať. '
         form.name = ''
         form.email = ''
         form.phone = ''
@@ -149,7 +149,7 @@ const submitForm = async () => {
                 />
             </div>
 
-            <div class="flex h-full w-full items-center justify-center">
+            <div class="flex h-full w-full items-center justify-center" id="dopyt">
                 <form
                     class="w-full h-full rounded-2xl border border-light/40 bg-light/20 p-6 backdrop-blur md:p-8"
                     @submit.prevent="submitForm"

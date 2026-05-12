@@ -10,7 +10,7 @@ const selectedService = ref('');
 function onServiceClick(service) {
     selectedService.value = service;
     setPrefillService(service);
-    const el = document.getElementById('contact');
+    const el = document.getElementById('dopyt');
     if (el) {
         el.scrollIntoView({ behavior: 'smooth' });
     }

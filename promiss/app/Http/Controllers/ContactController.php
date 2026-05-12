@@ -51,7 +51,7 @@ class ContactController extends Controller
         }
 
         return response()->json([
-            'message' => 'Ďakujeme, vaša správa bola odoslaná.',
+            'message' => 'Ďakujeme, vaša správa bola odoslaná. V najbližších dňoch Vás budeme kontaktovať. ',
         ]);
     }
 }
